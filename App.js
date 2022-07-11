@@ -189,8 +189,6 @@ setPasswordVisibility = () => {
             </View>
             </View>
     </View>
-    
-    
     <View>
     <Text style={styles.text}>User's mobile phone</Text>
         <View style={{flexDirection: 'row'}}>
@@ -219,16 +217,16 @@ setPasswordVisibility = () => {
          <View style={styles.modalContainer}>
 
          
-            <Text>{this.state.fullname}</Text>
-            <Text>{this.state.email}</Text>
-            <Text>{this.state.createpassword}</Text>
-            <Text>{this.state.confirmpassword}</Text>
-            <Text>{this.state.houseflatnumber}</Text>
-            <Text>{this.state.street}</Text>
-            <Text>{this.state.area}</Text>
-            <Text>{this.state.city}</Text>
-            <Text>{this.state.state}</Text>
-            <Text>{this.state.phoneno}</Text>
+            <Text style ={styles.add}>{this.state.fullname}</Text>
+            <Text style ={styles.add}>{this.state.email}</Text>
+            <Text style ={styles.add}>{this.state.createpassword}</Text>
+            <Text style ={styles.add}>{this.state.confirmpassword}</Text>
+            <Text style ={styles.add}>{this.state.houseflatnumber}</Text>
+            <Text style ={styles.add}>{this.state.street}</Text>
+            <Text style ={styles.add}>{this.state.area}</Text>
+            <Text style ={styles.add}>{this.state.city}</Text>
+            <Text style ={styles.add}>{this.state.state}</Text>
+            <Text style ={styles.add}>{this.state.phoneno}</Text>
 
 
             <TouchableOpacity>
@@ -241,12 +239,7 @@ setPasswordVisibility = () => {
        </View>
   
   )
-    
-  
-   
- 
-  
- }
+    }
  }   
     
     
@@ -256,23 +249,20 @@ const styles = StyleSheet.create ({
     backgroundColor:'white',
     padding:1,
     margin:5
-   
-  },
+   },
   text:{
     fontSize:15,
     marginRight:20,
     marginLeft:1,
     padding:10,
-    
-  },
+     },
   txt:{
     fontSize:15,
     marginRight:20,
-    marginLeft:1,
-    padding:10,
+   marginLeft:1,
+    padding:15,
     margin:10
-    
-  },
+    },
   FullName:{
     flexDirection: 'row',
     borderLeftColor: 'white',
@@ -280,22 +270,19 @@ const styles = StyleSheet.create ({
     borderTopColor: 'white',
     borderWidth: 1,
     borderColor: 'green',
-    
-  
     width:350,
-    margin:1,
+    margin:10,
     height:20,
     marginLeft:10,
     marginRight:10,
     
   },
-  // placeholder:{
-  // //  marginLeft:10,
-  //  marginRight:60
-  // },
+ placeholder:{
+    marginLeft:10,
+    marginRight:60
+   },
   email:{
-    
-  flexDirection: 'row',
+    flexDirection: 'row',
     borderLeftColor: 'white',
     borderRightColor: 'white',
     borderTopColor: 'white',
@@ -306,8 +293,7 @@ const styles = StyleSheet.create ({
     height:20,
     marginLeft:10,
     marginRight:10,
-    
-  },
+     },
   address:{
     flexDirection:"row",
     width:300,
@@ -328,11 +314,11 @@ const styles = StyleSheet.create ({
   },
   emailerror:{
   color:'red',
-  marginTop:10
+  marginTop:1
   },
   eye:{
     height:20,
-    width:15
+    width:15, 
   },
   textStyle:{
     fontSize:20,
@@ -343,120 +329,13 @@ const styles = StyleSheet.create ({
     height:10,
     width:10,
     paddingTop:20
+  }, 
+  add:{
+    fontSize:15,
+    padding:10,
+    margin:20
   }
 })  
 export default App;   
 
 
-// const [isVisible, setVisible] = useState(false);
-// const tempFunction = () => {
-// Alert.alert('onShow');
-//  }
-// const callDismiss_iOS = () => {
-// console.log('onDismiss');
- 
-//   }
- 
-//   const Modal_Component = () => (
-//     <View style={{height:0}}>
-//       <Modal
-//         animationType={"slide"}
-//         transparent={false}
-//         visible={isVisible}
-//         onDismiss={callDismiss_iOS}
-//         presentationStyle={"FullScreen"}
-//         supportedOrientations={['portrait']}
-//         onOrientationChange={['landscape']}
-//         onShow={tempFunction}
-//         hardwareAccelerated={false}
-//         onRequestClose={() => {
-//           console.log("closed.");
-//         }}>
-//         <View style={styles.container}>
-//           <View style={styles.modalContainer}>
-
-           
-//            <Text style={styles.text}>hardwareAccelerated Modal</Text>
-//            <Text style={styles.text}>hardwareAccelerated Modal</Text>
-//            <TouchableOpacity style={styles.button}>
-//             <Button title='Hide Modal' onPress={() => setVisible(!isVisible)} />
-//             </TouchableOpacity>
-//          </View>
-//         </View>
-//       </Modal>
-    
-//     </View>
-    
-  
-//   );
- 
-//   return (
-//     <View style={{ flex: 1 }}>
-//       <View style={styles.MainContainer}>
-//         <Image source={require("./Assets/download.jpeg")} style={styles.image}/>
-//          <Modal_Component/>
-//          <Text style={styles.text}>Click now to open modal</Text>
-//          <TouchableOpacity style={styles.button}>
-//         <Button onPress={() => setVisible(true)} title='Show Modal' />
-//         </TouchableOpacity>
-//        </View>
-//       </View>
-//   );
-// }
- 
-// const styles = StyleSheet.create({
-//   container:{
-//     flex:1, 
-//     backgroundColor:'#DCDCDC',
-//     borderColor:"#DCDCDD",
-//     borderWidth:2,
-//     borderRadius:20,
-//     margin:20,
-//     padding:10,
-//     shadowOpacity:10,
-//     shadowRadius:10,
-//     elevation:10, 
-//     justifyContent:'center',
-//     alignItems:'center'
-//   },
- 
-//   MainContainer: {
-//     flex: 1,
-//     padding: 10,
-//     alignItems: 'center',
-//     justifyContent: 'center'
-//   },
-//   modalContainer: {
-//     width: 300,
-//     height: 300,
-//     backgroundColor: '#F50057',
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     borderRadius: 10,
-//     borderWidth: 1,
-//     borderColor: 'white'
-//   },
-//   text: {
-//     fontSize: 28,
-//     textAlign: 'center',
-//     color: 'blue',
-//     padding: 10
-//   },
-//   image: {
-//     marginTop: 100,
-//     marginBottom: 10,
-//     width: '90%',
-//     height: 200,
-//   },
-//   button: {
-//     borderRadius:6,
-//     backgroundColor:'lightgreen',
-//     shadowColor:'pink',
-//     shadowRadius: 25,
-//     marginTop:50,
-//     borderRadius:20,
-//     height:50,
-//     width:150
-//   }
- 
-// });

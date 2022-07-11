@@ -69,13 +69,9 @@ setPasswordVisibility = () => {
   this.setState({ hidePassword: !this.state.hidePassword });
 }
 
-
-  
-
- render(){
+render(){
   const { modalVisible } = this.state;
   return (
-
 <View style ={styles.container}>
       <Text style ={styles.txt}>Full Name</Text>
       <View style ={{flexDirection:'row'}}>
@@ -92,17 +88,9 @@ setPasswordVisibility = () => {
           <View style={styles.email}>
             <Image source={require('./Assets/email-icon.jpeg')} style={styles.image}/>
             <TextInput placeholder= "Email" 
-            
             onBlur={() => this.emailValidator()}
             autoCapitalize="words"
-           
-        
-          onChangeText={(text) => this.setState({email: text})}/>
-
-        
-
-
-            
+            onChangeText={(text) => this.setState({email: text})}/>
     </View>
     </View>  
     <Text style={styles.emailerror}>{this.state.emailError}></Text> 
@@ -123,19 +111,14 @@ setPasswordVisibility = () => {
           <View style={styles.email}>
             <Image source ={require('./Assets/key.png')} style={styles.key}/>
             <TextInput placeholder= "Confirm Password" style={styles.placeholder}
-            
             onBlur={() => this.passwordValidator()}
             autoCapitalize="words"
             onChangeText={(text) => {this.setState({password:text})}}
             secureTextEntry={this.state.hidePassword}></TextInput>
-             
-              <TouchableOpacity onPress={this.setPasswordVisibility}>
+             <TouchableOpacity onPress={this.setPasswordVisibility}>
         <Image source={(this.state.hidePassword)  ? require('./Assets/eye.png') : require('./Assets/eye-hidden.webp')} style={styles.eye}/>
-        
-             </TouchableOpacity>
-            
-            
-    </View>
+       </TouchableOpacity>
+            </View>
     </View>
     <Text style={styles.emailerror}>{this.state.passwordError}></Text>
     </View>
@@ -213,10 +196,8 @@ setPasswordVisibility = () => {
     onRequestClose = {() => ('closed')}>
 
 <View style={styles.container}>
-         <View style={styles.modalContainer}>
-
-         
-            <Text style={styles.add}>{this.state.fullname}</Text>
+         <View>
+         <Text style={styles.add}>{this.state.fullname}</Text>
             <Text style={styles.add}>{this.state.email}</Text>
             <Text style={styles.add}>{this.state.createpassword}</Text>
             <Text style={styles.add}>{this.state.confirmpassword}</Text>
@@ -227,15 +208,13 @@ setPasswordVisibility = () => {
             <Text style={styles.add}>{this.state.state}</Text>
             <Text style={styles.add}>{this.state.phoneno}</Text>
 <TouchableOpacity>
-            
-             <Button title='Close Modal' onPress={() => this.setModalVisible(!modalVisible)}/>
+            <Button title='Close Modal' onPress={() => this.setModalVisible(!modalVisible)}/>
              </TouchableOpacity> 
           </View>
          </View>
        </Modal>
        </View>
-  
-  )
+)
   }
  }   
     
@@ -328,8 +307,8 @@ setPasswordVisibility = () => {
   },
     add:{
       fontSize:15,
-    padding:10,
-    margin:20
+      padding:10,
+      margin:20
   }
   })  
 export default App;   

@@ -189,9 +189,7 @@ setPasswordVisibility = () => {
             </View>
             </View>
     </View>
-    
-    
-    <View>
+   <View>
     <Text style={styles.text}>User's mobile phone</Text>
         <View style={{flexDirection: 'row'}}>
           <View style={styles.email}>
@@ -201,8 +199,7 @@ setPasswordVisibility = () => {
             style={styles.placeholder}/>
     </View>
     </View>
-
-    </View>
+</View>
     <View>
          <Button title = 'Submit' 
         onPress={() => this.setModalVisible(!modalVisible)}
@@ -219,19 +216,17 @@ setPasswordVisibility = () => {
          <View style={styles.modalContainer}>
 
          
-            <Text>{this.state.fullname}</Text>
-            <Text>{this.state.email}</Text>
-            <Text>{this.state.createpassword}</Text>
-            <Text>{this.state.confirmpassword}</Text>
-            <Text>{this.state.houseflatnumber}</Text>
-            <Text>{this.state.street}</Text>
-            <Text>{this.state.area}</Text>
-            <Text>{this.state.city}</Text>
-            <Text>{this.state.state}</Text>
-            <Text>{this.state.phoneno}</Text>
-
-
-            <TouchableOpacity>
+            <Text style={styles.add}>{this.state.fullname}</Text>
+            <Text style={styles.add}>{this.state.email}</Text>
+            <Text style={styles.add}>{this.state.createpassword}</Text>
+            <Text style={styles.add}>{this.state.confirmpassword}</Text>
+            <Text style={styles.add}>{this.state.houseflatnumber}</Text>
+            <Text style={styles.add}>{this.state.street}</Text>
+            <Text style={styles.add}>{this.state.area}</Text>
+            <Text style={styles.add}>{this.state.city}</Text>
+            <Text style={styles.add}>{this.state.state}</Text>
+            <Text style={styles.add}>{this.state.phoneno}</Text>
+<TouchableOpacity>
             
              <Button title='Close Modal' onPress={() => this.setModalVisible(!modalVisible)}/>
              </TouchableOpacity> 
@@ -241,38 +236,29 @@ setPasswordVisibility = () => {
        </View>
   
   )
-    
-  
-   
- 
-  
- }
+  }
  }   
     
-    
-const styles = StyleSheet.create ({
+  const styles = StyleSheet.create ({
   container:{
     flex:1,
     backgroundColor:'white',
     padding:1,
     margin:5
-   
   },
   text:{
     fontSize:15,
     marginRight:20,
     marginLeft:1,
     padding:10,
-    
   },
   txt:{
     fontSize:15,
     marginRight:20,
     marginLeft:1,
-    padding:10,
+    padding:15,
     margin:10
-    
-  },
+    },
   FullName:{
     flexDirection: 'row',
     borderLeftColor: 'white',
@@ -280,34 +266,30 @@ const styles = StyleSheet.create ({
     borderTopColor: 'white',
     borderWidth: 1,
     borderColor: 'green',
-    
-  
     width:350,
-    margin:1,
+    margin:10,
     height:20,
     marginLeft:10,
     marginRight:10,
     
   },
-  // placeholder:{
-  // //  marginLeft:10,
-  //  marginRight:60
-  // },
+   placeholder:{
+    marginLeft:10,
+    marginRight:60
+   },
   email:{
-    
-  flexDirection: 'row',
+    flexDirection: 'row',
     borderLeftColor: 'white',
     borderRightColor: 'white',
     borderTopColor: 'white',
     borderWidth: 1,
     borderColor: 'green',
-     margin:10,
+    margin:10,
     width:350,
     height:20,
     marginLeft:10,
     marginRight:10,
-    
-  },
+    },
   address:{
     flexDirection:"row",
     width:300,
@@ -343,8 +325,13 @@ const styles = StyleSheet.create ({
     height:10,
     width:10,
     paddingTop:20
+  },
+    add:{
+      fontSize:15,
+    padding:10,
+    margin:20
   }
-})  
+  })  
 export default App;   
 
 

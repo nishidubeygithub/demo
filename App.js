@@ -43,8 +43,6 @@ emailValidator = () => {
     this.setState({emailError:""})
   }
 }
-
-
 passwordValidator = () => {
   if (this.state.password == "") 
   {

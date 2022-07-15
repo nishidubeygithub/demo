@@ -12,6 +12,7 @@ const TextInputComponent = props => {
         style={styles.placeholder}
         secureTextEntry={props.secureTextEntry}
         onBlur={props.onBlur}
+        value={props.value}
         onChangeText={props.onChangeText}/>
     </View>
      </View>
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
     borderColor: 'purple',
     width: 340,
     height: 35,
-    marginLeft: 5,
+    marginLeft: 10,
     marginRight: 5,
   },
 });

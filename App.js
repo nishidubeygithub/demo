@@ -3,7 +3,6 @@ import React, {Component} from 'react';
  import Login from './Demo/Login';
 
  class App extends React.Component {
-
   constructor() {
     super();
   
@@ -13,11 +12,8 @@ import React, {Component} from 'react';
   };
     render(){
       return(
-        
-          <Login/>
-          
-        
-      )
+         <Login/>
+          )
     }
   }
   export default App;

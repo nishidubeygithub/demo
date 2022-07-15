@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text,StyleSheet, TextInput, SafeAreaView, Button, TouchableOpacity, Modal, ScrollView} from 'react-native';
 import TextInputComponent from '../Demo/TextInputComponent';
-// import Modalcomp from '../Demo/Modalcomp';
 class Login extends React.Component {
-
 constructor() {
   super();
 this.state = { 

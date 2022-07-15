@@ -5,7 +5,7 @@ const TextInputComponent = props => {
   return (
     <View>
       <Text style={styles.text}>{props.title}</Text>
-            <Image source={props.data} style={styles.name}/>
+            {/* <Image source={props.data} style={styles.name}/> */}
             <View style = {styles.email}> 
       <TextInput
         placeholder={props.placeholder}

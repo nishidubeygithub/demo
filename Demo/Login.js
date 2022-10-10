@@ -57,80 +57,67 @@ ClearData = () => {
 fullnameValidator = () => {
   if (this.state.fullname == "") 
    {this.setState({fullnameError:" name cannot be empty"})
-  }
-  else
+  }else
   {this.setState({fullnameError:""})
   }
 }
 emailValidator = () => {
   if (this.state.email == "") 
    {this.setState({emailError:" Email cannot be empty"})
-  }
-  else
+  }else
   {this.setState({emailError:""})
   }
 }
 createpasswordValidator = () => {
   if (this.state.createpassword == "") 
   {this.setState({createpasswordError:" password must be 5 char long"})
-  }
-  else
+  }else
   {this.setState({createpasswordError:""})}
 };
 passwordValidator = () => {
   if (this.state.password == "") 
   {this.setState({passwordError:" password must be 5 char long"})
-  }
-  else
-  {
-    this.setState({passwordError:""})}
+  }else
+  {this.setState({passwordError:""})}
 };
 houseflatnoValidator = () => {
   if (this.state.houseflatno == "") 
   {this.setState({houseflatnoError:" area not found"})
-  }
-  else
+  }else
   {this.setState({houseflatnoError:""})}
 };
 streetValidator = () => {
   if (this.state.houseflatno == "") 
   {this.setState({streetError:" street not found"})
-  }
-  else
+  }else
   {this.setState({streetError:""})}
 };
 areaValidator = () => {
   if (this.state.houseflatno == "") 
   {this.setState({areaError:" locality not found"})
-  }
-  else
+  }else
   {this.setState({areaError:""})}
 };
 cityValidator = () => {
   if (this.state.houseflatno == "") 
   {this.setState({cityError:" city not found"})
-  }
-  else
-  {
-    this.setState({cityError:""})}
+  }else
+  {this.setState({cityError:""})}
 };
 stateValidator = () => {
   if (this.state.houseflatno == "") 
   {this.setState({stateError:" city not found"})
-  }
-  else
+  }else
   {this.setState({stateError:""})}
 };
 phonenoValidator = () => {
   if (this.state.password == "") 
   {this.setState({phonenoError:" phoneno must be 10 char long"})
-  }
-  else
+  }else
   {this.setState({phonenoError:""})}
 };
 validator =()=> {
-  if (this.state.email== this.state.Typeemail  
-    && this.state.password == this.state.Typepassword )
+  if (this.state.email== this.state.Typeemail && this.state.password == this.state.Typepassword )
 {this.setState({visible: true});
 }else{
   alert('login unsuccessfull')
@@ -145,8 +132,8 @@ render(){
         <View style ={styles.email}>
         <TextInputComponent placeholder ="FullName"
          onBlur={() => this.fullnameValidator()}
-         value={this.state.name}
-         onChangeText={(text)=> {this.setState({fullname: text})
+        value={this.state.name}
+        onChangeText={(text)=> {this.setState({fullname: text})
                                 this.setState({name: text})}}
           style={styles.placeholder}/>
           </View>
